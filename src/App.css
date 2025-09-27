@@ -1,0 +1,194 @@
+/* Global styles */
+/* body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+} */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* background: url("/images/ib.jpg") no-repeat center center fixed; */
+  background-size: cover;
+  color: #333;
+}
+
+
+/* .app {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+} */
+
+.app {
+  position: relative;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85); /* White with opacity */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #222;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.controls button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background: #1e4db7;
+}
+
+.controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+th:hover {
+  background: #f1f5f9;
+}
+
+tr:hover td {
+  background: #f9fafb;
+}
+
+/* Status buttons */
+td button {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+td button:hover { opacity: 0.85; }
+
+td button:disabled { cursor: not-allowed; }
+
+td button.Active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+td button.Inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Action buttons */
+td button:nth-child(1) { background: #e0f2fe; color: #0369a1; margin-right: 6px; }
+td button:nth-child(2) { background: #fee2e2; color: #b91c1c; }
+
+/* Pagination */
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pagination button:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.pagination span {
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr { margin-bottom: 12px; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+
+  td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    border-bottom: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  th { display: none; }
+}
