@@ -107,7 +107,7 @@ tr:hover td {
   background: #f9fafb;
 }
 
-/* Status buttons */
+/* buttons */
 td button {
   padding: 6px 10px;
   border-radius: 20px;
@@ -130,7 +130,7 @@ td button.Inactive {
   color: #b91c1c;
 }
 
-/* Action buttons */
+/*buttons */
 td button:nth-child(1) { background: #e0f2fe; color: #0369a1; margin-right: 6px; }
 td button:nth-child(2) { background: #fee2e2; color: #b91c1c; }
 
@@ -162,7 +162,6 @@ td button:nth-child(2) { background: #fee2e2; color: #b91c1c; }
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .controls {
     flex-direction: column;

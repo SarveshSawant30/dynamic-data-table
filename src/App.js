@@ -31,7 +31,6 @@ export default function App() {
       );
   }, []);
 
-  // Filter + search + sort
   const processed = useMemo(() => {
     let data = [...rows];
     if (statusFilter !== "All") data = data.filter(r => r.status === statusFilter);
@@ -111,15 +110,15 @@ export default function App() {
 
   const doc = new jsPDF();
 
-  // Optional title
+
   doc.setFontSize(14);
   doc.text("User Data Export", 14, 15);
 
-  // Prepare headers + body
+
   const headers = [Object.keys(data[0])];
   const body = data.map(row => Object.values(row));
 
-  // Call the plugin correctly
+
   autoTable(doc, {
     startY: 25,
     head: headers,
@@ -135,7 +134,6 @@ export default function App() {
         backgroundSize: 'cover'
       }}
     >
-      {/* rest of your app */}
       <h2>Dynamic Data Table</h2>
       <div className="controls">
         <input placeholder="Search name/email" value={search} onChange={e => setSearch(e.target.value)} />
